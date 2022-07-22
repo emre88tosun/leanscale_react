@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+/*
+ * File: App.css
+ * Project: leanscale_react
+ * Author: Emre Tosun (emre@emretosun.dev)
+ * -----
+ * Last Modified: 2022
+ * Modified By: Emre Tosun (emre@emretosun.dev)
+ * -----
+ * Copyright 2022 - 2022 Emre Tosun
+ */
+@import "~antd/dist/antd.css";
+.site-layout-content {
+	min-height: 85vh;
+	padding: 24px;
+	background: #fff;
 }
+.header-cname {
+	float: left;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	margin: 0 24px 0 0;
+	padding: 0 10px;
+	color: white;
+	align-items: baseline;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ant-card-meta-detail {
+	width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ant-card-meta-description {
+	float: right;
 }
-
-.App-link {
-  color: #61dafb;
+.ant-list-item {
+	padding: 16px 0 !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-list-item-action {
+	display: flex;
+	align-items: center;
+}
+.co-product-price {
+	display: flex;
+	justify-content: space-between;
 }

@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# LeanScale Case Study - ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Basic e-commerce project with 3 products. I've used axios-mock-adapter for API calls & fake database, Redux for state management and Ant Desing of React for UI concerns.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+First of all, you need to clone the project to your local.
 
-### `npm start`
+```
+git clone https://github.com/emre88tosun/leanscale_react.git
+cd leanscale_react
+```
 
-Runs the app in the development mode.\
+### Building
+
+### `yarn && yarn start`
+
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Testing
 
-### `npm test`
+### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner. I've provided few Redux tests.
 
-### `npm run build`
+## Developer Notes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Simply we've 4 pages: Products, Cart, Product Detail and 404.
+2. Our state starts with empty arrays of Products and Cart Items.
+3. When we hit the first load of Products page, products will be retrieved from fake database.
+4. Users may add items to cart via "Add To Cart" buttons that are located in products page or product details page.
+5. Users may increase or decrease amount of goods via input spinners in cart page.
+6. Users may delete item from cart via delete button in cart page.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Assumptions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Since I've used axios-mock-adapter, I did not cover all the createAsyncThunk's states (pending or rejected). We could use them for loading indicators or error showing in real world cases.
+2. Since there is only one offer for users, the initial offer (Second red plate offer) is hard-coded . We could design a flexible logic:
+   -API call for offers
+   -Offer's apply condition ( eg. Total price is bigger than 100$, Cart has 3 spesific items )
+   -Applying discount
