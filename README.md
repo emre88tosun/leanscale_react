@@ -38,7 +38,7 @@ Launches the test runner. I've provided few Redux tests.
 1. Since I've used axios-mock-adapter, I did not cover all the createAsyncThunk's states (pending or rejected). We could use them for loading indicators or error showing in real world cases.
 2. Since there is only one offer for users, the initial offer (Second red plate offer) is hard-coded . We could design a flexible logic:
 ```
-*API call for offers
-*Offer's apply condition ( eg. Total price is bigger than 100$, Cart has 3 spesific items )
-*Applying discount
+1. API call for offers
+2. Offer's apply condition ( eg. Total price is bigger than 100$, Cart has 3 spesific items )
+3. Applying discount
 ```
