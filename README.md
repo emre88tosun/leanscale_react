@@ -42,3 +42,4 @@ Launches the test runner. I've provided few Redux tests.
 2. Offer's apply condition ( eg. Total price is bigger than 100$, Cart has 3 spesific items )
 3. Applying discount
 ```
+3. Since I've used fake database with axios-mock-adapter, every F5 refresh will clear the cart.
